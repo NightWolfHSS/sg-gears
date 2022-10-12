@@ -1,24 +1,23 @@
 <?php 
 /*
 *------------------
-* GEARS
+* sg-GEARS
 * project started: 
-* -13.09.2022- 
+* psr-2
 * -----------------
 * file configuration for web
 * bootstrap file Router
 */
 
-
 require 'app/db/config.php';
 require 'app/vendor/autoload.php';
-
+require 'app/modules/functions.php';
 
 // Routes 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 	$r->addRoute('GET', '/', 'app/temp/home-view.php');
 	$r->addRoute('GET', '/home', 'app/temp/home-view.php');
-
+    $r->addRoute('GET', '/sweg', 'app/temp/sweg.php');
 });
 
 // Fetch method and URI from somewhere
