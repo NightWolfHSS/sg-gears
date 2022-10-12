@@ -1,0 +1,19 @@
+{
+  "name": "gears.com",
+  "version": "1.0.0",
+  "description": "gears.com web for business\u001b[D\u001b[D\u001b[D\u001b[D\u001b\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b[... idea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NightWolfHSS/gears.com.git"
+  },
+  "author": "Slavik_Pro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NightWolfHSS/gears.com/issues"
+  },
+  "homepage": "https://github.com/NightWolfHSS/gears.com#readme"
+}
