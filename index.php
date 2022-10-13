@@ -8,6 +8,7 @@
 * file configuration for web
 * bootstrap file Router
 */
+header('Content-Type: text/html; charset=UTF-8');
 
 require 'app/db/config.php';
 require 'app/vendor/autoload.php';
@@ -18,6 +19,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 	$r->addRoute('GET', '/', 'app/temp/home-view.php');
 	$r->addRoute('GET', '/home', 'app/temp/home-view.php');
     $r->addRoute('GET', '/sweg', 'app/temp/sweg.php');
+    $r->addRoute('GET', '/about', 'app/temp/contact-view.php');
 });
 
 // Fetch method and URI from somewhere

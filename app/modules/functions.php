@@ -5,7 +5,6 @@
 	* modules 
 	* functions | scripts
 	*/
-	header('Content-Type: text/html; charset=UTF-8');
 	
 	/*show errors*/
 	ini_set('display_errors', 1);
@@ -40,7 +39,7 @@
 	function get_title()
 	{
 		$path =  $_SERVER['REQUEST_URI'];
-		//
+
 		if ($path == '/' || $path == '/home') {
 			return "Домашняя страница";
 		}
@@ -48,6 +47,8 @@
 		if ($path == '/sweg') {
 			return "да свиг свиг";
 		}
+
+
 
 	}
 
