@@ -1,0 +1,224 @@
+/*CSS-for-adminPanel*/
+*{padding: 0; margin: 0; list-style-type: none; text-decoration: none; font-family: calibri;}
+body {
+	overflow-y: hidden; 
+	background-image: url("../images-panel/gig.jpg"); /* The image used */
+    background-color: #9FB2E8; /* Used if the image is unavailable */
+    height: 800px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;}
+.content {	overflow: hidden; position: fixed;}
+.wp-popup {
+	display: none;
+	z-index: 5;
+	left: 0;
+	height: 500px;
+	width: 100%;
+	position: fixed;
+/*	display: flex;*/
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.popup {
+	padding: 20px;
+	border-radius: 20px;
+	background: #ecf0f1;
+	border: 2px solid silver;
+}
+.no:hover{ background: #3498db;} .no {margin-top: 10px;}
+.yes:hover {background: #d63447;}
+.no, .yes {
+	cursor: pointer;
+	text-align: center;
+	padding: 20px;
+}
+
+
+@media (min-width: 200px) and (max-width: 384px) {
+	body {width: 100%;}
+	.wp-content {
+		text-align: center!important;
+		margin: 0 auto;
+	}
+}
+
+/*for - moble-tab */
+@media (max-width: 699px) {
+
+	body {overflow-y: scroll!important; display: block!important; background: #fff!important;}
+	.content {
+	min-height: 1200px; 
+	position: absolute!important;
+	 max-width: 1200px; border-radius: 20px; 
+	-webkit-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);
+	-moz-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);
+	box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);}
+	
+	.panel {
+	background: orange;
+	display: flex;
+	flex-direction: column;}
+
+	.box-center-one {display: none;}
+	.center-bar {
+		text-align: center;
+		padding: 5px;
+		background: white;}
+
+	.head-center form {padding: 10px; } .head-center h1 {font-size: 30px; color: #444;}
+	.head-center form input { padding: 5px; border-radius: 5px; border: 1px solid orange; font-size: 18px; margin: 20px 0; }
+	.head-center form button {padding: 5px; font-size: 18px; background: orange; border-radius: 5px; border: none; color: white; }
+	.litle-content {
+		display: none;
+		border-radius: 5px;
+		background: #f1f1f1;
+		text-align: left;
+		margin: 0 15px;
+		padding: 20px 20px 20px 20px;	}
+	.mob-tittle { font-size: 18px; }
+	.wp-content { padding: 15px; text-align: left; background: #f4f4f4; margin:10px; }
+	.link-main {
+		font-size: 18px;
+		color: white;
+		display: inline-block;
+		background: #7227EA;
+		margin: 10px auto 0 auto;
+		border-radius: 10px;
+		padding: 5px;
+		width: 150px;
+		height: 50px;}
+	.link-main:hover {background: #f56a47;}
+	.active-c { background:#444;  }
+
+	.p-left {
+		color: #444;
+		padding-left: 20px;
+		text-align: left;
+	}
+
+	.rg-space-top { display: flex; justify-content: flex-end;}
+	.right-bar { padding: 20px; background: white;}
+	.p-click {background: orange;  padding: 5px; margin: 5px 0; width: 50px; text-align: center; color: white; border-radius: 5px;}
+	.center-box-rb { color: #444; } .center-box-rb h3 {padding: 20px 0;}
+	.mob-box {  padding: 20px 0; margin: 15px 0;}
+	.mob-box a {font-size: 20px; border: 1px solid #444; padding: 20px; color: #444;   }
+}
+	
+
+/*for - tab design*/
+@media (min-width: 700px) {
+	.panel {
+		background: orange;
+		display: flex;
+		flex-direction: row;}
+	.left-bar, .center-bar, .right-bar {height: 700px;}
+	.left-bar {
+		border-right: 1px solid #F6F6F6;
+		background: white;
+		width: 80px;}
+	.center-bar {
+		background: #FDFDFD;
+		width: 100%;}
+	.right-bar {
+		background: url('../images-panel/bac-p.png');
+		border-left: 1px solid #4f9da6;
+		/*background: #fff;*/
+		width: 300px;}
+
+	/*box-center-one*/
+	.box-center-one {
+		padding-top: 50px;
+		padding-bottom: 20px;	}
+	/*.list-box-show {}*/
+	.sh {
+		padding: 20px 0;
+		text-align: center;
+		position: relative;
+		-webkit-transition: background 0.3s ease-in;
+	     -moz-transition: background 0.3s ease-in;
+	       -o-transition: background 0.3s ease-in;
+	          transition: background 0.3s ease-in;}
+	.sh a {	border-bottom: 1px solid silver;}
+	.sh:hover {background: #2BBCB0;}
+	.sh:hover a {border-bottom: 1px solid white;}
+	.line-fix { background: silver; width: 80%; height: 1px; margin: 0 auto; }
+
+	.head-center {
+		border-bottom: 1px solid #d3d3d3;
+		padding: 5px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;}
+
+	.head-center h1 { color: silver; font-family: calibri; font-weight: 100;  font-size: 18px;}
+	form input {border-radius: 5px; padding: 2px; border: 1px solid silver;}
+	.fa-search { padding: 5px; cursor: pointer; } 
+
+	.litle-content {
+		margin:  10px;
+		border: 1px solid silver;
+		border-radius: 5px;}
+	.litle-content p {padding: 10px; color:#5C5C5C; }
+	.p-left {padding-left: 10px;}
+	.wp-content {
+		background: #ededed;
+		border-radius: 5px;
+		padding: 10px;
+		margin: 10px;}
+	.cl {background:#d3d3d3; height: 1px; width: 100%; margin-bottom: 10px;}
+	.active-c {background: #444!important;}
+	.link-main {
+		font-size: 18px;
+		color: white;
+		display: inline-block;
+		background: #7227EA;
+		margin: 10px auto 0 auto;
+		border-radius: 10px;
+		padding: 5px;
+		width: 200px;
+		height: 50px;}
+	.link-main:hover {background: #f56a47;}
+	.rg-space-top { background: #f56a47; padding: 10px;}
+	.p-click {text-align: right; padding-right: 20px; color: white;} .p-click:hover {color:black; cursor: pointer;}
+	.center-box-rb {text-align: left;  padding-left: 20px; margin-top: 50px; color: #282f44;}
+	.center-box-rb h3 {font-weight: 100; font-size: 30px; padding-bottom: 10px;}
+	.center-box-rb a {color: black; font-size: 18px; border: 1px solid black; border-radius: 5px; padding: 10px;}
+	.center-box-rb a:hover {color: white; font-size: 18px; border: 1px solid orange; background: orange;}
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	.content { 
+	background: silver; height: 700px; width: 1200px; border-radius: 20px; 
+	-webkit-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);
+	-moz-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);
+	box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);}
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.content { 
+	background: silver; height: 700px; width: 1000px; border-radius: 20px; 
+	-webkit-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);
+	-moz-box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);
+	box-shadow: 0px 0px 26px -6px rgba(0, 0, 0, 0.41);}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+}

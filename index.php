@@ -14,12 +14,22 @@ require 'app/db/config.php';
 require 'app/vendor/autoload.php';
 require 'app/modules/functions.php';
 
-// Routes 
+// Routes | CRUD
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
+    /*ADMIN*/
+    $r->addRoute('GET', '/admin-p', 'app/temp/admin/panel.php');
+    /*READ*/
 	$r->addRoute('GET', '/', 'app/temp/home-view.php');
 	$r->addRoute('GET', '/home', 'app/temp/home-view.php');
-    $r->addRoute('GET', '/sweg', 'app/temp/sweg.php');
     $r->addRoute('GET', '/about', 'app/temp/contact-view.php');
+    $r->addRoute('GET', '/gallery', 'app/temp/gallery-view.php');
+    $r->addRoute('GET', '/product', 'app/temp/product-view.php');
+    $r->addRoute('GET', '/service', 'app/temp/service-view.php');
+    $r->addRoute('GET', '/test', 'app/models/m-home.php');
+    /*ONLY-ADMIN*/
+    /*CREATE*/
+    /*UPDATE*/
+    /*DELETE*/
 });
 
 // Fetch method and URI from somewhere
