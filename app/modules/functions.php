@@ -53,11 +53,17 @@
 	*=============
 	*/
 
-	function get_admin_header()
+	/*left bar*/
+	function get_left_bar()
 	{
-		return "stmt";
+		include('app/temp/admin/temp/left-bar.php');
 	}
 
+	/*right bar*/
+	function get_right_bar()
+	{
+		include('app/temp/admin/temp/right-bar.php');
+	}
 
 
 	/*get title */
@@ -72,7 +78,6 @@
 		if ($path == '/sweg') {
 			return "да свиг свиг";
 		}
-
 
 
 	}

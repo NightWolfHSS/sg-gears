@@ -16,8 +16,12 @@ require 'app/modules/functions.php';
 
 // Routes | CRUD
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-    /*ADMIN*/
+    /*ADMIN _ sing - in panel hole*/
     $r->addRoute('GET', '/admin-p', 'app/temp/admin/panel.php');
+    $r->addRoute('GET', '/hole', 'app/temp/admin/hole.php');
+    $r->addRoute('POST', '/log', 'app/modules/conf.php');
+    /*admin-pages*/
+    $r->addRoute('GET', '/adm-contact', 'app/temp/admin/adm-contact.php');
     /*READ*/
 	$r->addRoute('GET', '/', 'app/temp/home-view.php');
 	$r->addRoute('GET', '/home', 'app/temp/home-view.php');
@@ -25,7 +29,6 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/gallery', 'app/temp/gallery-view.php');
     $r->addRoute('GET', '/product', 'app/temp/product-view.php');
     $r->addRoute('GET', '/service', 'app/temp/service-view.php');
-    $r->addRoute('GET', '/test', 'app/models/m-home.php');
     /*ONLY-ADMIN*/
     /*CREATE*/
     /*UPDATE*/

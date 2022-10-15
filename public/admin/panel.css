@@ -23,22 +23,31 @@ body {
 /*	display: flex;*/
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-}
+	align-items: center;}
 .popup {
 	padding: 20px;
 	border-radius: 20px;
 	background: #ecf0f1;
-	border: 2px solid silver;
-}
+	border: 2px solid silver;}
 .no:hover{ background: #3498db;} .no {margin-top: 10px;}
 .yes:hover {background: #d63447;}
 .no, .yes {
 	cursor: pointer;
 	text-align: center;
-	padding: 20px;
-}
+	padding: 20px;}
+.line-hero {
+	height: 600px;
+	overflow-y: scroll!important;}
 
+.form-ready {
+	background: silver;}
+
+.form-ready form {
+	display: flex;
+	flex-direction: column;}
+
+.push {color: white; font-size: 18px; padding: 5px; background: #838996; border: none;}
+.push:hover { background: #7227EA; cursor: pointer;}
 
 @media (min-width: 200px) and (max-width: 384px) {
 	body {width: 100%;}
@@ -74,6 +83,7 @@ body {
 	.head-center form {padding: 10px; } .head-center h1 {font-size: 30px; color: #444;}
 	.head-center form input { padding: 5px; border-radius: 5px; border: 1px solid orange; font-size: 18px; margin: 20px 0; }
 	.head-center form button {padding: 5px; font-size: 18px; background: orange; border-radius: 5px; border: none; color: white; }
+	.line-hero { display: block!important; }
 	.litle-content {
 		display: none;
 		border-radius: 5px;
@@ -83,6 +93,7 @@ body {
 		padding: 20px 20px 20px 20px;	}
 	.mob-tittle { font-size: 18px; }
 	.wp-content { padding: 15px; text-align: left; background: #f4f4f4; margin:10px; }
+	.form-ready {padding: 15px; text-align: left; background: #f4f4f4; margin:10px;}
 	.link-main {
 		font-size: 18px;
 		color: white;
@@ -114,7 +125,6 @@ body {
 /*for - tab design*/
 @media (min-width: 700px) {
 	.panel {
-		background: orange;
 		display: flex;
 		flex-direction: row;}
 	.left-bar, .center-bar, .right-bar {height: 700px;}
@@ -171,6 +181,12 @@ body {
 		border-radius: 5px;
 		padding: 10px;
 		margin: 10px;}
+	.form-ready {
+		background: #ededed;
+		border-radius: 5px;
+		padding: 10px;
+		margin: 10px;
+	}
 	.cl {background:#d3d3d3; height: 1px; width: 100%; margin-bottom: 10px;}
 	.active-c {background: #444!important;}
 	.link-main {
