@@ -1,4 +1,4 @@
-			<?php echo get_left_bar(); ?>
+			<?php get_left_bar(); ?>
 			<!-- center-bar -->
 			<div class="center-bar">
 
@@ -122,19 +122,10 @@
 							только удаление ссылка 
 						</div>
 
+						<!-- подвал стиль поменять и сделать белыми а не синими полупрозрачные фоны -->
+
 						<!-- navigaion -->
-						<div class="cl"></div><Br>
-						<h2 class="p-left">навигация:</h2>
-
-						<div class="wp-content mob-center">
-							<a class="link-main" href="">Главная </a>
-							<a class="link-main" href="">о нас </a>
-							<a class="link-main" href="">продукция </a>
-							<a class="link-main" href="">галлерея </a>
-							<a class="link-main" href="">сервис </a>
-						</div>
-
-						<br>
+						<?php get_navi(); ?>
 
 						<!-- update -->
 						<!-- подставь данные если есть - если нет вывод - извенять нечего также можно спрятать-->
@@ -146,4 +137,4 @@
 
 			</div>
 			<!-- end center-bar -->
-			<?php echo get_right_bar(); ?>
+			<?php get_right_bar(); ?>

@@ -1,4 +1,4 @@
-			<?php echo get_left_bar(); ?>
+			<?php get_left_bar(); ?>
 			<!-- center-bar -->
 			<div class="center-bar">
 
@@ -22,18 +22,10 @@
 			
 				</div>
 
-				<div class="cl"></div>
-				 <h2 class="p-left">навигация:</h2>
-
-				<div class="wp-content mob-center">
-					<a class="link-main" href="">Главная </a>
-					<a class="link-main" href="">о нас </a>
-					<a class="link-main" href="">продукция </a>
-					<a class="link-main" href="">галлерея </a>
-					<a class="link-main" href="">сервис </a>
-				</div>
+				<!-- navigaion -->
+				<?php get_navi(); ?>
 
 			</div>
 			<!-- end center-bar -->
-			<?php echo get_right_bar(); ?>
+			<?php get_right_bar(); ?>
 			

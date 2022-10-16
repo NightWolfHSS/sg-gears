@@ -65,6 +65,11 @@
 		include('app/temp/admin/temp/right-bar.php');
 	}
 
+	/*navigation*/
+	function get_navi()
+	{
+		include('app/temp/admin/temp/navi.php');
+	}
 
 	/*get title */
 	function get_title()

@@ -22,7 +22,11 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('POST', '/log', 'app/modules/conf.php');
     /*admin-pages*/
     $r->addRoute('GET', '/adm-contact', 'app/temp/admin/adm-contact.php');
-    /*READ*/
+    $r->addRoute('GET', '/adm-gallery', 'app/temp/admin/adm-gallery.php');
+    $r->addRoute('GET', '/adm-home', 'app/temp/admin/adm-home.php');
+    $r->addRoute('GET', '/adm-service', 'app/temp/admin/adm-service.php');
+    $r->addRoute('GET', '/adm-product', 'app/temp/admin/adm-product.php');
+    /*READ | HOME | USERS*/
 	$r->addRoute('GET', '/', 'app/temp/home-view.php');
 	$r->addRoute('GET', '/home', 'app/temp/home-view.php');
     $r->addRoute('GET', '/about', 'app/temp/contact-view.php');
