@@ -18,7 +18,7 @@
 			<!-- create -->
 			<!-- создать если нет - спрятать если есть -->
 			<div class="form-ready">
-				<form action="#" enctype="multipart/form-data">
+				<form action="/send_db" method="POST" enctype="multipart/form-data">
 					<label>выбрать картинку</label>
 					<input name="image" type="file">
 					<label>описание к картинке</label>

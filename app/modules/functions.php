@@ -46,6 +46,18 @@
 		include('app/temp/temp/footer.php');
 	}
 
+	/*mini-gallery*/
+	function get_mini_gallery()
+	{
+		include('app/temp/temp/mini-gallery.php');
+	}
+
+	/*slide*/
+	function get_slide()
+	{
+		include('app/temp/temp/slide.php');
+	}
+
 	/*
 	*=============
 	* helpres
@@ -71,6 +83,7 @@
 		include('app/temp/admin/temp/navi.php');
 	}
 
+
 	/*get title */
 	function get_title()
 	{
@@ -83,13 +96,22 @@
 		if ($path == '/sweg') {
 			return "да свиг свиг";
 		}
-
-
 	}
 
 
+	function make_migrations_all()
+	{
+		// создать миграцию - таблицу 
+		// тест таблиц команда по созданию таблиц 
+		// проверка если она уже сделана
 
-
+		$sql = "CREATE TABLE persons(
+		    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+		    first_name VARCHAR(30) NOT NULL,
+		    last_name VARCHAR(30) NOT NULL,
+		    email VARCHAR(70) NOT NULL UNIQUE
+		)";
+	}
 
 
  ?>
