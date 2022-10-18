@@ -18,6 +18,7 @@ require 'app/modules/functions.php';
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
     /*TEST*/
+    $r->addRoute('GET', '/flow', 'app/models/unit-test.php');
     $r->addRoute('POST', '/send_db', 'app/models/unit-test.php');
     /*ADMIN _ sing - in panel hole*/
     $r->addRoute('GET', '/admin-p', 'app/temp/admin/panel.php');
