@@ -1,3 +1,11 @@
+<?php 
+	if (isset($_SESSION['sxfd'])) {
+		if ($_SESSION['sxfd'] == 'stmtfix') {
+			header('Location: http://sg-gears:8080/adm-home');
+			exit();
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +20,7 @@
 			<div class="box-log-in">
 				<p>авторизроватся войти | log in</p>	
 				<div class="line"></div>
-				<form action="/log" method="POST">
+				<form action="/srtft" method="POST">
 					<label>LOGIN | ЛОГИН</label>
 					<input class="inp" name="name" type="text">
 					<label>PASSWORD | ПАРОЛЬ</label>
@@ -24,3 +32,4 @@
 	</div> <!-- wrapper -->
 </body>
 </html>
+

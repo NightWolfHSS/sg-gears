@@ -1,3 +1,9 @@
+<?php 
+	if (!isset($_SESSION['sxfd'])) {
+		header('Location: http://sg-gears:8080/hole');
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

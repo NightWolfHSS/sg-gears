@@ -8,8 +8,10 @@
 * file configuration for web
 * bootstrap file Router
 */
-header('Content-Type: text/html; charset=UTF-8');
 
+// 
+session_start();
+ob_start();
 require 'app/db/config.php';
 require 'app/vendor/autoload.php';
 require 'app/modules/functions.php';
@@ -18,11 +20,13 @@ require 'app/modules/functions.php';
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
     /*TEST*/
-    $r->addRoute('GET', '/test', 'app/temp/admin/temp/is_admin.php');
+    $r->addRoute('POST', '/srtft', 'app/temp/admin/temp/is_admin.php');
     $r->addRoute('GET', '/flow', 'app/models/unit-test.php');
     $r->addRoute('POST', '/send_db', 'app/models/unit-test.php');
     $r->addRoute('GET', '/kik', 'app/modules/migrate.php');
     /*ADMIN _ sing - in panel hole*/
+    $r->addRoute('GET', '/kils4', 'app/modules/kill.php');
+    $r->addRoute('GET', '/redirect_ready', 'app/temp/admin/temp/locationx.php');
     $r->addRoute('GET', '/admin-p', 'app/temp/admin/panel.php');
     $r->addRoute('GET', '/hole', 'app/temp/admin/hole.php');
     $r->addRoute('POST', '/log', 'app/modules/conf.php');
@@ -72,3 +76,4 @@ switch ($routeInfo[0]) {
         require $handler;
         break;
 }
+

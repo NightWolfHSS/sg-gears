@@ -67,9 +67,9 @@ function create_admin_table()
 function create_admin_user()
 {
 
-	$md5ch = md5("2j389s_!sad0hh2bui1bsudA_+@!IJSDAd");
+	$md5ch = md5("qwqwdqwdwqd");
 	$sql = "INSERT INTO adm (login, password)
-			VALUES('02202020101120312931293913-', '$md5ch');";
+			VALUES('asddsasdasd', '$md5ch');";
 	$conn = get_connect();
 	if ($conn->query($sql) === TRUE) {
 		echo "данные успешно сохранены";

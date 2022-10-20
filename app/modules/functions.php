@@ -5,7 +5,9 @@
 	* modules 
 	* functions | scripts
 	*/
-	
+	// vertificated
+	// require 'app/temp/admin/temp/is_admin.php';	
+
 	/*show errors*/
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
@@ -97,6 +99,8 @@
 			return "да свиг свиг";
 		}
 	}
+
+
 
 
  ?>
