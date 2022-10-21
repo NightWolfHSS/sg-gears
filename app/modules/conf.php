@@ -32,7 +32,7 @@ function get_tb()
 	}
 
 	if ($path == '/mirror') {
-		echo tests();
+		echo insert_in_gallery();
 	}
 
 }

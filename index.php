@@ -20,14 +20,14 @@ require 'app/modules/conf.php';
 // Routes | CRUD
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
+    $r->addRoute('POST', '/mirror', 'app/modules/mirror.php');
     /*TEST*/
-    $r->addRoute('POST', '/mirror', 'app/modules/test.php');
     $r->addRoute('POST', '/sweg', 'app/modules/test.php');
-    // $r->addRoute('POST', '/srtft', 'app/temp/admin/temp/is_admin.php');
-    // $r->addRoute('POST', '/send_db', 'app/models/unit-test.php');
     $r->addRoute('GET', '/kik', 'app/modules/migrate.php');
+    // $r->addRoute('POST', '/send_db', 'app/models/unit-test.php');
     // $r->addRoute('POST', '/shadow', 'app/modules/conf.php');
     /*ADMIN _ sing - in panel hole*/
+    $r->addRoute('POST', '/srtft', 'app/temp/admin/temp/is_admin.php');
     $r->addRoute('GET', '/kils4', 'app/modules/kill.php');
     $r->addRoute('GET', '/redirect_ready', 'app/temp/admin/temp/locationx.php');
     $r->addRoute('GET', '/admin-p', 'app/temp/admin/panel.php');

@@ -66,7 +66,7 @@ function create_table_gallery()
 
 function rename_table()
 {
-	$sql = "RENAME TABLE gallery TO sdasp";
+	$sql = "RENAME TABLE say TO sayz";
 	on_ready($sql);
 }
 // rename_table();
