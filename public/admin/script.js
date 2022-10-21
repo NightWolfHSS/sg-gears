@@ -14,7 +14,6 @@ function close_modal() {
 }
 
 
-
 function exit() {
 	window.location.href = "/kils4";
 }

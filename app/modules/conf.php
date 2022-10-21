@@ -1,19 +1,44 @@
 <?php 
-// сохранить данные соленые в базе данных - сделай запрос либо просто скопируй 
-// данные уже в базу данных готовые
+/*
+* connect modules | script | models 
+*/
 
-// получить данные нужно из бд - потому что секретно
-$logname = htmlspecialchars($_POST['name']);
-$logpass   = md5(htmlspecialchars($_POST['password'] . 'sweg'));
+require 'app/modules/loadfile.php';
+require 'app/models/gallery.php';
 
-var_dump($logname);
-var_dump($logpass);
 
-if ($_POST['name']) {
-	return ;// template 
-} else {
-	return ;// error temp - данные верны не верно
+// каждый метод. каждый экшен
+// экономия - модули не create_gallery detele_gallery update_gallery - 1 модуль и несколько методов 
+// у тебя выход есть подключать всё сюда - но когда ты будешь записывать или 
+// отображать данные - ты должнен будешь придумать какое то условие которое будет 
+// вызывать только ту функцию которая должна в данный момент использоватся
+// функции будут но только ты их сразу же не вызывай
+// вызывай их при загрузке url теущего метода
+
+
+
+
+/*run sql*/	
+function get_tb()
+{
+	$path =  $_SERVER['REQUEST_URI'];
+
+	if ($path == '/' || $path == '/home') {
+		echo tests();
+	}
+	//
+	if ($path == '/sweg') {
+		echo getData();
+	}
+
+	if ($path == '/mirror') {
+		echo tests();
+	}
+
 }
+
+
+
 
 
 ?>

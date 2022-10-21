@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width" />
-  <title><?php echo get_title(); ?></title>
+  <title><?php echo 'asd'; ?></title>
   <link rel="stylesheet" href="<?php echo CSS_PATH ?>components.css">
   <link rel="stylesheet" href="<?php echo CSS_PATH ?>responsee.css">
   <link rel="stylesheet" href="<?php echo OWL_PATH ?>owl.carousel.css">

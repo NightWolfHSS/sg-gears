@@ -1,10 +1,11 @@
 <?php 
 /*
-* func create imagen
-* generate | comress imagen
-* delete old imagen
-* return void
+* use DRY
+* this is module use:  
+* create file | compress | generate name file | delete old file time folder`s 
+* return new file
 */
+
 function get_files_test()
 {	
 	$error = $_FILES['image']['error'];
@@ -16,8 +17,10 @@ function get_files_test()
 	 		$tmp_name = $_FILES['image']['tmp_name'];
 			$name = basename($_FILES['image']['name']);
 			$move = move_uploaded_file($tmp_name, "$path_upload/$name"); 
-			file_compress($name);
+			$stmt = file_compress($name);
 			delete_old_image($name);
+			echo "загружено!";
+			return $stmt;
 		} else {
 			return die();
 		}
@@ -26,21 +29,22 @@ function get_files_test()
 		// show popup is null file and redirect 
 		echo "файла не было ";
 	}
-	echo "загружено!";
+	
 }
 
 /*file compress*/
 function file_compress($file)
 {
 	$path_to = dirname(__DIR__).'\upload\\';
-	$cnf = $path_to.uniqid().'.jpg';
+	$gen_code = uniqid().'.jpg';
+	$cnf = $path_to.$gen_code;
 	$img = new Imagick(dirname(__DIR__). '\outtimefiles'.'\\'.$file);
 	$img->setImageFormat('jpg');
 	$img->setImageCompressionQuality(70);
 	if (!file_exists($cnf)) {
 		$img->writeImage($cnf);
 	}
-	
+	return $gen_code;
 }
 
 /*delete old file*/

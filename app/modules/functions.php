@@ -5,8 +5,6 @@
 	* modules 
 	* functions | scripts
 	*/
-	// vertificated
-	// require 'app/temp/admin/temp/is_admin.php';	
 
 	/*show errors*/
 	ini_set('display_errors', 1);
@@ -22,6 +20,7 @@
 	define('CSS_ADM', '/public/admin/');
 	define('JS_ADM', '/public/admin/');
 	define('LINK_', '/public/images-panel/');
+
 
 	/*
 	* =============
@@ -84,23 +83,5 @@
 	{
 		include('app/temp/admin/temp/navi.php');
 	}
-
-
-	/*get title */
-	function get_title()
-	{
-		$path =  $_SERVER['REQUEST_URI'];
-
-		if ($path == '/' || $path == '/home') {
-			return "Домашняя страница";
-		}
-		//
-		if ($path == '/sweg') {
-			return "да свиг свиг";
-		}
-	}
-
-
-
 
  ?>

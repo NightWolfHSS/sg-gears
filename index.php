@@ -9,21 +9,24 @@
 * bootstrap file Router
 */
 
-// 
 session_start();
 ob_start();
+
 require 'app/db/config.php';
 require 'app/vendor/autoload.php';
 require 'app/modules/functions.php';
+require 'app/modules/conf.php';
 
 // Routes | CRUD
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
     /*TEST*/
-    $r->addRoute('POST', '/srtft', 'app/temp/admin/temp/is_admin.php');
-    $r->addRoute('GET', '/flow', 'app/models/unit-test.php');
-    $r->addRoute('POST', '/send_db', 'app/models/unit-test.php');
+    $r->addRoute('POST', '/mirror', 'app/modules/test.php');
+    $r->addRoute('POST', '/sweg', 'app/modules/test.php');
+    // $r->addRoute('POST', '/srtft', 'app/temp/admin/temp/is_admin.php');
+    // $r->addRoute('POST', '/send_db', 'app/models/unit-test.php');
     $r->addRoute('GET', '/kik', 'app/modules/migrate.php');
+    // $r->addRoute('POST', '/shadow', 'app/modules/conf.php');
     /*ADMIN _ sing - in panel hole*/
     $r->addRoute('GET', '/kils4', 'app/modules/kill.php');
     $r->addRoute('GET', '/redirect_ready', 'app/temp/admin/temp/locationx.php');
