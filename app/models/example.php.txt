@@ -1,6 +1,6 @@
 <?php 
 
-	/*
+	/**
 	* table name table
 	* connect in file config | get_connect method to connect db
 	*/
