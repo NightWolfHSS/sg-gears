@@ -1,5 +1,6 @@
 <?php get_left_bar(); ?>
 <!-- center-bar -->
+
 <div class="center-bar">
 
 	<div class="head-center">
@@ -10,6 +11,8 @@
 	    </form>
 	</div>
 
+	<?php get_success(); ?>
+
 	<div class="litle-content line-hero">
 
 			<!-- если данных нет то показать по умолчанию статику- если пусто - статика - если поля пустые тоже статика -->
@@ -18,7 +21,7 @@
 			<!-- create -->
 			<!-- создать если нет - спрятать если есть -->
 			<div class="form-ready">
-				<form action="/mirror" method="POST" enctype="multipart/form-data">
+				<form action="/add_gallery" method="POST" enctype="multipart/form-data">
 					<label>выбрать картинку</label>
 					<input name="image" type="file">
 					<label>описание к картинке</label>
@@ -28,8 +31,14 @@
 			</div>
 
 			<div class="form-ready">
-				<!-- нужна проверка -->
-				отобразить данные галлереи
+				<!-- отобразить для удаление айтема id -->
+				<p><b>Удаление по id , или описанию (Галлерея)</b></p>
+				<div class="space_box">
+					<ul>
+						<?php get_gallery(); ?>
+					</ul>
+				</div>
+				
 			</div>
 
 			<div class="cl"></div>

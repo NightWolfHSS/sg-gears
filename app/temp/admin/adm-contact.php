@@ -9,7 +9,7 @@
 				      <button type="submit"><i class="fa fa-search">найти</i></button>
 				    </form>
 				</div>
-
+				<?php get_success(); ?>
 				<div class="litle-content line-hero">
 
 						<!-- если данных нет то показать по умолчанию статику- если пусто - статика - если поля пустые тоже статика -->

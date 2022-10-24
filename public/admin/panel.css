@@ -12,6 +12,11 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;}
+.box-spawn-log {
+	position: relative;
+	width: 100%;
+	height: 0;
+}
 .content {	overflow: hidden; position: fixed;}
 .wp-popup {
 	display: none;
@@ -38,9 +43,25 @@ body {
 .line-hero {
 	height: 600px;
 	overflow-y: scroll!important;}
-
+.space_box {
+	overflow-y: scroll;
+	height: 200px;
+}
 .form-ready {
 	background: silver;}
+.form-ready ul li {padding: 2px; margin: 2px 0;}
+.form-ready ul li a {
+	padding: 2px;
+	border: 1px solid silver;
+	border-radius: 5px;
+	margin: 5px;
+	color: gray;
+}
+.form-ready ul li a:hover {
+	border: 1px solid red;
+	color: red;
+	cursor: pointer;
+}
 
 .form-ready form {
 	display: flex;
@@ -48,7 +69,16 @@ body {
 
 .push {color: white; font-size: 18px; padding: 5px; background: #838996; border: none;}
 .push:hover { background: #7227EA; cursor: pointer;}
+.spawn_logi_green, .spawn_logi_red { 
+	color: #616161;
+	padding: 20px;
+	font-size: 20px; }
+.spawn_logi_green {
+	background: #c4e3cb;}
+.spawn_logi_red {
+	background: #fed9ca;}
 
+/*error e4dccf bakg*/
 @media (min-width: 200px) and (max-width: 384px) {
 	body {width: 100%;}
 	.wp-content {

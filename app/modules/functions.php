@@ -84,4 +84,10 @@
 		include('app/temp/admin/temp/navi.php');
 	}
 
+	/*success*/
+	function get_success()
+	{
+		include('app/temp/admin/temp/success.php');
+	}
+
  ?>

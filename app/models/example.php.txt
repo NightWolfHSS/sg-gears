@@ -5,17 +5,17 @@
 	* connect in file config | get_connect method to connect db
 	*/
 
-// this function should be in another file maybe
-function on_ready($sql)
-{
-	// Sorry no time for explanations
-	if (get_connect()->query($sql)) {
-		echo "Создано!";
-	} else {
-		echo "Ошибка";
+	// this function should be in another file maybe
+	function on_ready($sql)
+	{
+		// Sorry no time for explanations
+		if (get_connect()->query($sql)) {
+			echo "Создано!";
+		} else {
+			echo "Ошибка";
+		}
+		get_connect()->close();
 	}
-	get_connect()->close();
-}
 
 	function insert_in_gallery()
 	{

@@ -1,8 +1,12 @@
 <?php 
 /*
-* Mirror
-* get_tb() - route another functions 
+* Mirror handler params | methods
+*/
+
+
+/*
+* route another function 
 * redirect and use current method
 */
-	get_tb(); 
+get_tb();
 ?>

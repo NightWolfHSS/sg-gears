@@ -39,7 +39,7 @@
          </div>
          <!-- MAP -->	
          <div id="map-block">  	  
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d682251.1123056135!2d17.063451638281247!3d48.09010461740988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8cbf758ecb9f%3A0xddeb1d26bce5eccf!2sGallayova+2150%2F19%2C+841+02+D%C3%BAbravka%2C+Slovensk%C3%A1+republika!5e0!3m2!1ssk!2s!4v1412519122400" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2569.580727748981!2d73.08031974368319!3d49.906674345417635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1666383036056!5m2!1sru!2skz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>         
          <!-- slide -->
          <?php get_slide(); ?>
