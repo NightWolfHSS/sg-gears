@@ -3,7 +3,7 @@
 * connect modules | script | models 
 
 */
-
+require 'app/modules/removeFile.php';
 require 'app/modules/loadfile.php';
 require 'app/models/gallery.php';
 
@@ -27,8 +27,9 @@ function get_tb()
 	if ($path == '/rename_gallery') {
 		// insert_in_gallery();
 	}
+	
 	/*
-	* delete methode
+	* delete methods
 	*/
 	if ($path == '/delete_gallery/'.$str[2]) {
 		// migrate model metthod
