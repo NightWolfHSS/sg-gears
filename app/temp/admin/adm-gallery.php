@@ -31,14 +31,12 @@
 			</div>
 
 			<div class="form-ready">
-				<!-- отобразить для удаление айтема id -->
 				<p><b>Удаление по id , или описанию (Галлерея) | если пусто данных нет</b></p>
 				<div class="space_box">
 					<ul>
-						<?php get_gallery(); ?>
+						<?php get_gallery_adm(); ?>
 					</ul>
 				</div>
-				
 			</div>
 
 			<div class="cl"></div>
@@ -46,18 +44,24 @@
 			<!-- create -->
 			<!-- создать если нет - спрятать если есть -->
 			<div class="form-ready">
-				<form action="#" enctype="multipart/form-data">
+				<form action="/add_mini_g" method="POST" enctype="multipart/form-data">
 					<label>выбрать картинку</label>
 					<input name="image" type="file">
 					<label>описание к картинке</label>
-					<input name="description" type="text"><br>
+					<input name="description" type="text">
+					<label>seo описание картинки</label>
+					<input name="alt" type="text"><br>
 					<button class="push" type="submit">добавить картинку</button>
 				</form>
 			</div>
 
 			<div class="form-ready">
-				<!-- нужна проверка -->
-				отобразить данные галлереи
+				<p><b>Удаление по id , или описанию (мини-галлерея) | если пусто данных нет</b></p>
+				<div class="space_box">
+					<ul>
+						<?php get_mini_adm(); ?>
+					</ul>
+				</div>
 			</div>
 		
 			<!-- navigaion -->

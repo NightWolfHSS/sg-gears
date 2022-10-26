@@ -13,7 +13,7 @@
 				</div>
 
 				<div class="center-box-rb mob-box">
-					<a href="">Перейти на сайт</a>
+					<a href="/" target="_blank">Перейти на сайт</a>
 				</div>
 				
 				<div class="center-box-rb">

@@ -49,9 +49,13 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     /*ONLY-ADMIN*/
     /*CREATE*/
     $r->addRoute('POST', '/add_gallery', 'app/modules/mirror.php');
+    $r->addRoute('POST', '/add_mini_g', 'app/modules/mirror.php');
     /*UPDATE*/
     /*DELETE*/
     $r->addRoute('GET', '/delete_gallery/{id:\d+}', 'app/modules/mirror.php');
+    $r->addRoute('GET', '/delete_mini/{id:\d+}', 'app/modules/mirror.php');
+
+
 });
 
 // Fetch method and URI from somewhere
