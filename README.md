@@ -1,3 +1,4 @@
-# zbrorez.kz #
-## another webApp ##
-[zuborez.kz](https://zuborez.kz/ "перейти на сайт")
+# zuborez.kz #
+## веб, для бизнеса  ##
+
+по завершению проекта будет ссылка на сайт и скетч
