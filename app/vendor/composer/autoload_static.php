@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3402086528c5dd8ce322affbd1217b21
+class ComposerStaticInit0b6fee0c0b2d550d0066a298cdaa69fb
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
@@ -24,6 +24,16 @@ class ComposerStaticInit3402086528c5dd8ce322affbd1217b21
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'I' => 
+        array (
+            'Imagick' => 
+            array (
+                0 => __DIR__ . '/..' . '/calcinai/php-imagick/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -31,9 +41,10 @@ class ComposerStaticInit3402086528c5dd8ce322affbd1217b21
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3402086528c5dd8ce322affbd1217b21::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3402086528c5dd8ce322affbd1217b21::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit3402086528c5dd8ce322affbd1217b21::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0b6fee0c0b2d550d0066a298cdaa69fb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0b6fee0c0b2d550d0066a298cdaa69fb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0b6fee0c0b2d550d0066a298cdaa69fb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0b6fee0c0b2d550d0066a298cdaa69fb::$classMap;
 
         }, null, ClassLoader::class);
     }
