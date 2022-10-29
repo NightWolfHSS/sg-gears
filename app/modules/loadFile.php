@@ -1,9 +1,7 @@
 <?php 
 /*
-* use DRY
-* this is module use:  
-* create file | compress | generate name file | delete old file time folder`s 
-* return new file
+*( v1/.1)
+* load File
 */
 
 function get_files_test()
@@ -16,43 +14,21 @@ function get_files_test()
 		if (is_uploaded_file($_FILES['image']['tmp_name'])) {
 	 		$tmp_name = $_FILES['image']['tmp_name'];
 			$name = basename($_FILES['image']['name']);
-			$move = move_uploaded_file($tmp_name, "$path_upload/$name"); 
-			$stmt = file_compress($name);
-			delete_old_image($name);
-			echo "загружено!";
-			return $stmt;
+
+			if ($_FILES['image']['size'] > '1572864') {
+				echo "формат изображения превышает!";
+				die();
+			} else {
+				$move = move_uploaded_file($tmp_name, "$path_upload/$name"); 
+				return $stmt;
+			}
 		} else {
 			return die();
 		}
 
 	} else {
 		// show popup is null file and redirect 
-		echo "файла не было ";
+		echo "файла не было";
 	}
-	
 }
 
-/*file compress*/
-function file_compress($file)
-{
-	$path_to = dirname(__DIR__).'\upload\\';
-	$gen_code = uniqid().'.jpg';
-	$cnf = $path_to.$gen_code;
-	$img = new Imagick(dirname(__DIR__). '\outtimefiles'.'\\'.$file);
-	$img->setImageFormat('jpg');
-	$img->setImageCompressionQuality(70);
-	if (!file_exists($cnf)) {
-		$img->writeImage($cnf);
-	}
-	return $gen_code;
-}
-
-/*delete old file*/
-function delete_old_image($imagen)
-{
-	unlink(dirname(__DIR__).'\outtimefiles\\'.$imagen);
-}
-
-
-
-?>

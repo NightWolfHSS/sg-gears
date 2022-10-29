@@ -19,8 +19,6 @@ require 'app/vendor/autoload.php';
 
 // Routes | CRUD
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-
-    
     /*TEST*/
     $r->addRoute('POST', '/sweg', 'app/modules/test.php');
     $r->addRoute('GET', '/kik', 'app/modules/migrate.php');

@@ -1,5 +1,5 @@
 <?php 
 	unset($_SESSION['sxfd']);
-	header('Location: http://sg-gears:8080/hole');
+	header('Location: https://zuborez.kz/hole');
 	exit();
 ?>

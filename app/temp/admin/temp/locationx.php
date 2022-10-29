@@ -1,4 +1,4 @@
-<?php header("Refresh:5; http://sg-gears:8080/hole");?>
+<?php header("Refresh:5; https://zuborez.kz/hole");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

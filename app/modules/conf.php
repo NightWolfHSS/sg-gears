@@ -6,7 +6,7 @@
 define('IMG_PATH', 'app/upload/');
 
 require 'app/modules/removeFile.php';
-require 'app/modules/loadfile.php';
+require 'app/modules/loadFile.php';
 require 'app/models/gallery.php';
 require 'app/models/mini_g.php';
 

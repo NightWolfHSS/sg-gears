@@ -24,8 +24,9 @@
 				<form action="/add_gallery" method="POST" enctype="multipart/form-data">
 					<label>выбрать картинку</label>
 					<input name="image" type="file">
-					<label>описание к картинке</label>
-					<input name="description" type="text"><br>
+					<label>описание к картинке</label><br>
+					<input name="description" type="text">
+					<p></p>
 					<button class="push" type="submit">добавить картинку</button>
 				</form>
 			</div>
@@ -50,7 +51,8 @@
 					<label>описание к картинке</label>
 					<input name="description" type="text">
 					<label>seo описание картинки</label>
-					<input name="alt" type="text"><br>
+					<input name="alt" type="text">
+					<p></p>
 					<button class="push" type="submit">добавить картинку</button>
 				</form>
 			</div>

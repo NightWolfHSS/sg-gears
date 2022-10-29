@@ -1,7 +1,7 @@
 <?php 
 	if (isset($_SESSION['sxfd'])) {
 		if ($_SESSION['sxfd'] == 'stmtfix') {
-			header('Location: http://sg-gears:8080/adm-home');
+			header('Location: https://zuborez.kz/adm-home');
 			exit();
 		}
 	}
