@@ -4,7 +4,7 @@
             <div class="line">
                <div class="top-nav">              
                   <div class="logo hide-l">
-                     <a href="/home">Zubores <br /><strong>kz</strong></a>
+                     <a href="/home">Zubores <br /><strong>.kz</strong></a>
                   </div>                  
                   <p class="nav-text">навигация</p>
                   <div class="top-nav s-12 l-5">

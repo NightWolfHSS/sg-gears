@@ -12,66 +12,76 @@
 	<?php get_success(); ?>
 	<div class="litle-content line-hero">
 
-		<!-- если данных нет то показать по умолчанию статику- если пусто - статика - если поля пустые тоже статика -->
 		<div class="cl"></div>
 		<h2 class="p-left">добавить информацию - главная</h2><Br>
 		<!-- create -->
 		<hr><br>
 		<h2 class="p-left">Слайдер | добавить слайд</h2><Br>
 		<div class="form-ready">
-			<form action="#" enctype="multipart/form-data">
+			<form action="/add_slide" method="POST" enctype="multipart/form-data">
 				<label>выбрать картинку</label>
 				<input name="image" type="file">
-				<label>заголовок к картинке</label>
+				<label>название (слайдера | услуги | технологии)</label>
+				<input name="name" type="text">
+				<label>описание</label>
 				<input name="description" type="text">
-				<label>описание к картинке</label>
-				<input name="description" type="text"><br>
-				<button class="push" type="submit">добавить картинку</button>
+				<label>сео</label>
+				<input name="alt" type="text"><br>
+				<button class="push" type="submit">добавить слайд</button>
 			</form>
 		</div>
 
 		<div class="form-ready">
-			<!-- нужна проверка -->
-			отобразить слайды 
+			<p><b>удалить слайд (для слайдера - на главной)</b></p>
+			<div class="space_box">
+				<ul>
+					<?php get_slider_adm(); ?>
+				</ul>
+			</div>
+			
 		</div>
 
 		<hr><br>
-		<h2 class="p-left">фишки на главной | все фишки сразу</h2><Br>
+		<h2 class="p-left">фишки на главной | все фишки сразу |  картинки уже вшиты | только одна запись</h2><Br>
 		<div class="form-ready">
-			<form action="#">
+			<form action="/add_tips" method="POST">
+				<input type="hidden" name="id" value="7">
 				<label>описание</label>
-				<input name="description" type="text">
-				<label>описание к картинке</label>
-				<input name="description" type="text">
+				<input name="name" type="text">
+				<label>описание к фишкам</label>
+				<input name="desc_name" type="text">
 
 				<label>имя фишки 1</label>
-				<input name="description" type="text">
+				<input name="description_1" type="text">
 				<label>описание фишки 1</label>
-				<input name="description" type="text">
+				<input name="desc_picture_1" type="text">
 
 				<label>имя фишки 2</label>
-				<input name="description" type="text">
+				<input name="description_2" type="text">
 				<label>описание фишки 2</label>
-				<input name="description" type="text">
+				<input name="desc_picture_2" type="text">
 
 				<label>имя фишки 3</label>
-				<input name="description" type="text">
+				<input name="description_3" type="text">
 				<label>описание фишки 3</label>
-				<input name="description" type="text">
+				<input name="desc_picture_3" type="text">
 
 				<label>имя фишки 3</label>
-				<input name="description" type="text">
+				<input name="description_4" type="text">
 				<label>описание фишки 3</label>
-				<input name="description" type="text"><br>
-				
-
+				<input name="desc_picture_4" type="text"><br>
+			
 				<button class="push" type="submit">создать фишки</button>
 			</form>
 		</div>
 
 		<div class="form-ready">
-			<!-- нужна проверка -->
-			отобразить фишки 
+			<p><b>удалить фишки (главная)</b></p>
+			<div class="space_box">
+				<ul>
+					<?php get_tip_adm(); ?>
+				</ul>
+			</div>
 		</div>
 
 		<hr><br>

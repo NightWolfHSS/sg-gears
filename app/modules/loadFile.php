@@ -4,10 +4,14 @@
 * load File
 */
 
-function get_files_test()
+
+/*
+* return val | name
+*/
+function get_file()
 {	
 	$error = $_FILES['image']['error'];
-	$path_upload = 'app/outtimefiles';
+	$path_upload = 'app/upload/';
 
 	if($error == UPLOAD_ERR_OK) {
 		/*check is file was load*/
@@ -16,14 +20,23 @@ function get_files_test()
 			$name = basename($_FILES['image']['name']);
 
 			if ($_FILES['image']['size'] > '1572864') {
-				echo "формат изображения превышает!";
+				echo "нужно оптимизировать изображение - вес не более 1.5мб!";
 				die();
 			} else {
-				$move = move_uploaded_file($tmp_name, "$path_upload/$name"); 
-				return $stmt;
+
+				$fileInfo = pathinfo($_FILES['image']['name']);
+				$renderName = uniqid() . '.' . $fileInfo['extension'];
+				// check
+				if (!file_exists($path_upload."635d6b989b251.jpg")) {
+					move_uploaded_file($_FILES['image']['tmp_name'], $path_upload . $renderName);
+				} else {
+					die();
+				}
+
+				return $renderName;
 			}
 		} else {
-			return die();
+			die();
 		}
 
 	} else {

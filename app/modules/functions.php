@@ -59,6 +59,8 @@
 		include('app/temp/temp/slide.php');
 	}
 
+
+
 	/*
 	*=============
 	* helpres

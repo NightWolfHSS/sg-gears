@@ -4,6 +4,6 @@
 */
 function removeFile($imagen)
 {
-	unlink(dirname(__DIR__).'\upload\\'.$imagen);
+	unlink(dirname(__DIR__).'/upload/'.$imagen);
 }
 ?>

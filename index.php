@@ -12,6 +12,8 @@
 session_start();
 ob_start();
 
+
+
 require 'app/modules/functions.php';
 require 'app/db/config.php';
 require 'app/modules/conf.php';
@@ -23,7 +25,6 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('POST', '/sweg', 'app/modules/test.php');
     $r->addRoute('GET', '/kik', 'app/modules/migrate.php');
     // $r->addRoute('POST', '/send_db', 'app/models/unit-test.php');
-    // $r->addRoute('POST', '/shadow', 'app/modules/conf.php');
     /*ADMIN _ sing - in panel hole*/
     $r->addRoute('POST', '/srtft', 'app/temp/admin/temp/is_admin.php');
     $r->addRoute('GET', '/kils4', 'app/modules/kill.php');
@@ -48,10 +49,15 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     /*CREATE*/
     $r->addRoute('POST', '/add_gallery', 'app/modules/mirror.php');
     $r->addRoute('POST', '/add_mini_g', 'app/modules/mirror.php');
+    $r->addRoute('POST', '/add_slide', 'app/modules/mirror.php');
+    $r->addRoute('POST', '/add_tips', 'app/modules/mirror.php');
+
     /*UPDATE*/
     /*DELETE*/
     $r->addRoute('GET', '/delete_gallery/{id:\d+}', 'app/modules/mirror.php');
     $r->addRoute('GET', '/delete_mini/{id:\d+}', 'app/modules/mirror.php');
+    $r->addRoute('GET', '/delete_slide/{id:\d+}', 'app/modules/mirror.php');
+    $r->addRoute('GET', '/delete_tips/{id:\d+}', 'app/modules/mirror.php');
 
 
 });
